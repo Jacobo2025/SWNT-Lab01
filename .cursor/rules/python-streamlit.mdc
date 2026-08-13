@@ -1,0 +1,49 @@
+---
+description: Convenciones Python y Streamlit para el proyecto
+globs: **/*.py
+alwaysApply: false
+---
+
+# Python y Streamlit
+
+## Stack
+
+- Python 3.10+ con tipado estático (`typing`, `dataclasses`).
+- Streamlit como framework de interfaz; no mezclar lógica de negocio en callbacks de UI.
+- Dependencias en `requirements.txt` con versiones mínimas razonables.
+
+## Patrones Streamlit
+
+```python
+# ❌ MAL: toda la lógica en app.py
+def main():
+    data = fetch_and_process(url)  # 200 líneas mezcladas
+    st.dataframe(data)
+
+# ✅ BIEN: UI delgada, lógica en services/
+from services.data_service import load_processed_data
+
+def render_dashboard():
+    data = load_processed_data()
+    st.dataframe(data)
+```
+
+- Usar `st.session_state` para estado entre reruns; no variables globales mutables.
+- Extraer widgets repetidos a funciones en `pages/` o `components/`.
+- Cachear operaciones costosas con `@st.cache_data` o `@st.cache_resource`.
+
+## Python moderno
+
+- Preferir f-strings, `pathlib.Path`, y context managers.
+- Usar `dataclasses` o `TypedDict` para estructuras de datos en lugar de dicts sueltos.
+- Manejo de errores explícito: capturar excepciones concretas y mostrar mensajes claros al usuario.
+
+```python
+# ✅ BIEN
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class Producto:
+    nombre: str
+    precio: float
+```

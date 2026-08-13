@@ -1,0 +1,41 @@
+---
+description: Estándares de código limpio y arquitectura modular del proyecto
+alwaysApply: true
+---
+
+# Estándares del proyecto
+
+## Código limpio
+
+- Nombres descriptivos en español o inglés, pero consistentes en todo el repo.
+- Funciones cortas con una sola responsabilidad.
+- Evitar duplicación: extraer lógica repetida a funciones o módulos reutilizables.
+- Comentarios solo cuando la intención no sea obvia; el código debe explicarse solo.
+- Eliminar código muerto, imports sin usar y variables no utilizadas.
+
+## Código modular
+
+- Separar responsabilidades en capas claras:
+  - `app/` o `pages/`: interfaz (Streamlit)
+  - `services/` o `core/`: lógica de negocio
+  - `models/` o `schemas/`: estructuras de datos
+  - `utils/`: helpers genéricos
+- Cada módulo expone una API pequeña y clara; evitar archivos monolíticos.
+- La lógica de negocio no debe depender de Streamlit; mantenerla testeable de forma aislada.
+- Preferir composición sobre funciones largas con muchos parámetros.
+
+## Ejemplo de estructura
+
+```
+proyecto01/
+├── app.py              # Punto de entrada Streamlit (orquestación mínima)
+├── pages/              # Páginas o secciones de la app
+├── services/           # Lógica de negocio
+├── models/             # Dataclasses, tipos, validaciones
+└── utils/              # Utilidades compartidas
+```
+
+## Cambios mínimos
+
+- Resolver solo lo solicitado; no refactorizar código no relacionado.
+- Seguir convenciones existentes antes de introducir patrones nuevos.
