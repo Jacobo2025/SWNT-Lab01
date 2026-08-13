@@ -1,4 +1,4 @@
-# Experiencía de vibe Coding
+# Experienca de vibe Coding
 
 ## Configuración de reglas para mi agente
 Lo se hizo fue utilizar la barra de chat y pedirle al agente con el siguiente prompt que configurar las reglas del proyecto: 
