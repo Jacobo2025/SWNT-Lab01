@@ -17,6 +17,9 @@ class CarbonEstimate:
     total_kg_co2: float
     original_text: str
     source: str
+    category_totals: tuple[tuple[str, float], ...] = field(default_factory=tuple)
+    recommendations: tuple[str, ...] = field(default_factory=tuple)
+    clarifications: tuple[str, ...] = field(default_factory=tuple)
 
 
 @dataclass
