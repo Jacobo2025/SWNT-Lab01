@@ -20,5 +20,8 @@ Claramente se agiliza la creación de código con un agente como *cursor*, simpl
 
 ## Capturas de pantalla del uso
 
+**Replit**:
 ![Replit](img/45.png)
+
+**Cursor**:
 ![Cursor](img/46.png)
