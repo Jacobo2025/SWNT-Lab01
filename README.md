@@ -19,3 +19,6 @@ Me quedé sin créditos con un solo prompt y nisiquiera terminó la petición qu
 Claramente se agiliza la creación de código con un agente como *cursor*, simplemente escribí mi prompt lo más detallado posible, describiendo las funcionalidades de la aplicación web junto con algunos ejemplos de su funcionalidad. Solo lo corregí una vez, ya que encontré un error en una de las peticiones. El error en cuestión era que no detectaba que el cigarrillo dejara huella de carbono. Sin emebargo, luego de 4 prompts se me acabó la versión gratuita. El *vibe coding* permite tranformar un proceso que dura una semana en 5 minutos. Aun no me siento del todo cómodo pero es una herramienta muy útil.
 
 ## Capturas de pantalla del uso
+
+![Replit](img/45.png)
+![Cursor](img/46.png)
